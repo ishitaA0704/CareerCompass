@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root { font-family: 'Plus Jakarta Sans', sans-serif; color: #f8fafc; background: #0B0F19; font-synthesis: none; text-rendering: optimizeLegibility; }
+* { box-sizing: border-box; }
+html { background: #0B0F19; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: #0B0F19; }
+button, a, input, textarea { font: inherit; }
+button { cursor: pointer; }
+button:active { transform: scale(.98); }
+.font-display { font-family: 'Space Grotesk', sans-serif; }
+.font-mono { font-family: 'DM Mono', monospace; }
+::selection { background: rgba(99,102,241,.35); color: white; }
+.grid-pattern { background-image: linear-gradient(rgba(148,163,184,.045) 1px, transparent 1px), linear-gradient(90deg, rgba(148,163,184,.045) 1px, transparent 1px); background-size: 42px 42px; }
+.noise { position: relative; }
+.noise::after { content: ''; pointer-events: none; position: absolute; inset: 0; opacity: .035; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E"); mix-blend-mode: overlay; }
+.glow-indigo { box-shadow: 0 0 0 1px rgba(99,102,241,.18), 0 24px 80px rgba(79,70,229,.15); }
+.glow-emerald { box-shadow: 0 0 0 1px rgba(16,185,129,.16), 0 20px 70px rgba(16,185,129,.08); }
+.input-dark { width: 100%; border: 1px solid rgba(255,255,255,.09); background: rgba(255,255,255,.035); border-radius: 12px; color: #e2e8f0; padding: 11px 13px; outline: none; transition: border-color .18s, box-shadow .18s; }
+.input-dark:focus { border-color: rgba(129,140,248,.7); box-shadow: 0 0 0 3px rgba(99,102,241,.12); }
+.input-dark::placeholder { color: #475569; }
+@media (prefers-reduced-motion: no-preference) { .rise { animation: rise .45s cubic-bezier(.23,1,.32,1) both; } .pulse-dot { animation: pulse-dot 2s infinite; } }
+@keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes pulse-dot { 0%, 100% { box-shadow: 0 0 0 0 rgba(16,185,129,.35); } 50% { box-shadow: 0 0 0 6px rgba(16,185,129,0); } }
+
+/* Tailwind-compatible utilities used by the experience */
+
